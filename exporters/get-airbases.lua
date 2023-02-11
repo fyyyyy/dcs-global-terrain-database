@@ -45,9 +45,11 @@ function addAirbase (airbase)
     feature.properties.id = Airbase.getCallsign(airbase)
 
     desc = Airbase.getDesc(airbase)
+    runw = Airbase.getRunways(airbase)
     feature.properties.name = desc.displayName
     feature.properties.category = categories[desc.category + 1]
     feature.properties.point = point
+    feature.runways = runw
 
     --Add Feature to Collection
     table.insert(features, feature)
